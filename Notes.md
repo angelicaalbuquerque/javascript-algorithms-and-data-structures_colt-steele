@@ -114,7 +114,9 @@ Big O nos permite falar de uma maneira muito formal sobre como o tempo de execu�
 
 > Dizemos que um algortimo é _O(f(n))_ se o número de operações simples a serem executadas for eventualmente menor que uma constante vezes _f(n)_, enquanto _n_ cresce.
 
-- f(n) pode ser linear (f(n) = n);
-- f(n) pode ser quadrática (f(n) = n²);
-- f(n) pode ser constante (f(n) = 1);
+Relacionamento de um input de _n_ com o tempo de execução:
+
+- f(n) pode ser linear (f(n) = n) _enquanto n cresce, o tempo de execução cresce linearmente_;
+- f(n) pode ser quadrática (f(n) = n²) _enquanto n cresce, o tempo de execução cresce quadráticamente_;
+- f(n) pode ser constante (f(n) = 1) _enquanto n cresce, o tempo de execução não cresce e não é impactado, pois é sempre constante_;
 - f(n) pode ser algo totalmente diferente!
