@@ -107,3 +107,14 @@ Portanto, se _n_ for 10, haverão 52 operações. Se _n_ for 100, haverão 502 o
 > 💡 A ferramenta [Performance Tracker](https://rithmschool.github.io/function-timer-demo/) ajuda a entender ou traçar o tempo que as funções levam para serem executadas e obter um gráfico de desempenho.
 
 ### Introdução oficial à Notação Big O
+
+Big O nos permite falar de uma maneira muito formal sobre como o tempo de execução de um algoritmo cresce à medida que as entradas aumentam.
+
+É uma maneira de descrever o relacionamento entre a entrada para uma função ou à medida que ela cresce e como isso altera o tempo de execução dessa função; a relação entre o tamanho da entrada e, em seguida, o tempo relativo a essa entrada.
+
+> Dizemos que um algortimo é _O(f(n))_ se o número de operações simples a serem executadas for eventualmente menor que uma constante vezes _f(n)_, enquanto _n_ cresce.
+
+- f(n) pode ser linear (f(n) = n);
+- f(n) pode ser quadrática (f(n) = n²);
+- f(n) pode ser constante (f(n) = 1);
+- f(n) pode ser algo totalmente diferente!
