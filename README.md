@@ -19,9 +19,9 @@
 
 <p align="center">
   <a href="#-Sobre">Sobre</a>&nbsp;&nbsp;|&nbsp;
-  <a>
+  <!-- <a>
     <a href="#-Acessar-os-projetos">Acessar os projetos</a>&nbsp;&nbsp;|&nbsp;
-  <a>
+  <a> -->
   <a href="#-Entre-em-contato">Contato</a>
 </p>
 
@@ -40,9 +40,9 @@ Alguns dos assuntos abordados neste curso:
 - Algoritmo de Dijkstra;
 - Estruturas de Dados (linked lists, trees, heaps, hash tables e graphs).
 
-## 💻 Acessar os projetos
+<!-- ## 💻 Acessar os projetos
 
-_Os estudos serão compartilhados em breve._
+_Os estudos serão compartilhados em breve._ -->
 
 ## 📬 Entre em contato!
 
