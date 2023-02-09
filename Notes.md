@@ -112,7 +112,7 @@ Big O nos permite falar de uma maneira muito formal sobre como o tempo de execu�
 
 É uma maneira de descrever o relacionamento entre a entrada para uma função ou à medida que ela cresce e como isso altera o tempo de execução dessa função; a relação entre o tamanho da entrada e, em seguida, o tempo relativo a essa entrada.
 
-> Dizemos que um algoritmo é _O(f(n))_ se o número de operações simples a serem executadas for eventualmente menor que uma constante vezes _f(n)_, enquanto _n_ cresce.
+> 💡 Dizemos que um algoritmo é _O(f(n))_ se o número de operações simples a serem executadas for eventualmente menor que uma constante vezes _f(n)_, enquanto _n_ cresce.
 
 Relacionamento de um input de _n_ com o tempo de execução:
 
@@ -120,3 +120,55 @@ Relacionamento de um input de _n_ com o tempo de execução:
 - f(n) pode ser quadrática (f(n) = n²) _enquanto n cresce, o tempo de execução cresce quadraticamente_;
 - f(n) pode ser constante (f(n) = 1) _enquanto n cresce, o tempo de execução não cresce e não é impactado, pois é sempre constante_;
 - f(n) pode ser algo totalmente diferente!
+
+Sendo assim, enquanto _n_ cresce, como isso muda para refletir no tempo de execução?
+
+Exemplos:
+
+1. **Sempre 3 operações: O(1)** - enquanto _n_ cresce à medida que a entrada para essa função cresce, isso não reflete no tempo de execução.
+
+```js
+function addUpTo(n) {
+  return (n * (n + 1)) / 2;
+}
+```
+
+2. **Número de operações limitada por múltiplo de _n_: O(_n_)** - É uma constante. Enquanto _n_ cresce, o tempo de execução cresce basicamente em proporção 1:1 e o número de operações é (eventualmente) limitado por um múltiplo de _n_. Não importa se é 1n, 5n, 10n... porque no final isso é simplificado para apenas O(n), pois estamos preocupados apenas com a ordem de magnitude.
+
+```js
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
+```
+
+3. **0(n)** - Na parte "Going up!" do código, enquanto o _n_ cresce o loop cresce,então temos 0(n). O mesmo para a parte "At the top!", que também é 0(n). Sendo assim, é uma constante e se _n_ triplicar, o templo de execução também triplicará. Lembrando que não nos preocupamos com quantos _n_ temos, mas sim com o cenário.
+
+```js
+function countUpAndDown(n) {
+  console.log("Going up!");
+  for (var i = 0; i < n; i++) {
+    console.log(i);
+  }
+  console.log("At the top!\nGoing down...");
+  for (var j = n - 1; j >= 0; j--) {
+    console.log(j);
+  }
+  console.log("Back down. Bye!");
+}
+```
+
+4. **Operação O(n) dentro de uma operação O(n): 0(n²)** - Temos um loop aninhado. O primeiro loop é O(n), pois enquanto _n_ cresce, terá um número _n_ de operações. O segundo loop é também O(n). Nesse exemplo, não podemos simplificar tudo como O(n) porque os loops estão aninhados. Como essa operação é O(n\*n)- podemos simplificar para O(n²) -, significa que à medida que _n_ cresce, o tempo de execução cresce proporcionalmente na taxa n². É uma quadrática.
+
+```js
+function printAllPairs(n) {
+  for (var i = 0; i < n; i++) {
+    for (var j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+}
+```
