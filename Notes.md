@@ -212,7 +212,3 @@ No gráfico abaixo, vemos com clareza a diferença entre as complexidades. Perce
 <div align="left">
     <img src=".github/01-general-trend.png" width="500"/>
 </div>
-
-### asas
-
-hasuahshadfdfidf ufdfsd8fsd fdsf df sdfsd
