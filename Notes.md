@@ -172,3 +172,43 @@ function printAllPairs(n) {
   }
 }
 ```
+
+### Simplificando Expressões Big O
+
+Conforme vimos em exemplos anteriores, contar operações diferentes pode ser complicado e que a contagem exata realmente não importa, o que importante é a tendência geral.
+
+Por exemplo, podemos simplificar numa operação **5n + n** por apenas **n**, já que à medida que **n** cresce, o tempo de execução cresce proporcionalmente e não importa se são duas, três, dez, vinte, cinquenta vezes.
+
+Existem algumas regras para simplificar expressões Big O, que são consequências da definição de Big O.
+
+- Constantes não importam;
+
+  - Se temos algo como _O(2n)_, simplificamos para _O(n)_.
+  - Se temos algo como _O)(500)_, simplificamos para _O(1)_.
+  - sE temos algo como _O(13n²)_, simplificamos para _O(n²)_.
+
+- Termos menores também não importam.
+  - Se temos algo como _O(n + 10)_, simplificamos para _O(n)_.
+  - Se temos algo como _O(1000n + 50)_, simplificamos para _O(n)_, não precisamos da constante 1000*n* e nem do termo 50.
+  - Se temos algo como _O(n² + 5n + 8)_, simplificamos para _O(n²)_.
+
+### Big O shorthand
+
+- Analisar a complexidade com Big O pode ser complicado;
+- Tem regras práticas que podem ajudar;
+- Essas regras nem sempre irão funcionar, mas são boas para a maioria dos casos.
+
+1. Operações aritméticas são constantes;
+   - Não importa o tamanho do número a ser processado, seu computador leva aproximadamente o mesmo tempo para executar uma operação aritmética, seja 2 + 2 ou 1 milhão + 2.
+2. Atribuição de variável também é constante;
+   - O computador leva o mesmo tempo para criar uma variável que você sabe que X é igual a 5, ou que X é igual a 1 milhão.
+3. Acessar elementos em um array (por index) ou objeto (por chave) é uma operação constante;
+   - O computador leva o mesmo tempo para acessar o primeiro elemento de um array ou o último elemento de um array.
+4. Em um loop, a complexidade é a duração do loop vezes a complexidade de qualquer operação que aconteça dentro do loop;
+   - Se você tem um loop aninhado, e o loop externo tem complexidade O(n) e o loop interno tem complexidade O(n²), então o loop externo é O(n²).
+
+No gráfico abaixo, vemos com clareza a diferença entre as complexidades. Perceba que O(1) é sempre uma constante em linha reta, enquanto O(n) cresce de acordo com o tamanho do _n_.
+
+<div align="left">
+    <img src=".github/01-general-trend.png" width="500"/>
+</div>
