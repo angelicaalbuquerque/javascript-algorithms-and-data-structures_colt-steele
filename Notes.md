@@ -185,7 +185,7 @@ Existem algumas regras para simplificar expressões Big O, que são consequênci
 
   - Se temos algo como _O(2n)_, simplificamos para _O(n)_.
   - Se temos algo como _O)(500)_, simplificamos para _O(1)_.
-  - sE temos algo como _O(13n²)_, simplificamos para _O(n²)_.
+  - Se temos algo como _O(13n²)_, simplificamos para _O(n²)_.
 
 - Termos menores também não importam.
   - Se temos algo como _O(n + 10)_, simplificamos para _O(n)_.
