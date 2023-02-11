@@ -212,3 +212,51 @@ No gráfico abaixo, vemos com clareza a diferença entre as complexidades. Perce
 <div align="left">
     <img src=".github/01-general-trend.png" width="500"/>
 </div>
+
+### Complexidade de Espaço
+
+> 💡 Complexidade de Espaço é o espaço sobre a quantidade de memória que um algoritmo usa.
+
+Até agora, nos preocupamos apenas com a complexidade do tempo, sobre a rapidez com que os algoritmos são executados com o tempo de execução — Analisamos o tempo de execução de um algoritmo conforme o tamanho da entrada aumenta.
+
+Mas também podemos nos preocupar com a complexidade do espaço, que é o que acontece com o espaço que um algoritmo ocupa à medida que o tamanho da entrada aumenta. Quanto de memória adicional precisamos alocar para executar o código em nosso algoritmo?
+
+à medida que _n_ cresce, assumimos que o resultado final vai crescer Portanto, não vamos nos preocupar com esse espaço, vamos nos preocupar com as repercussões que têm dentro do algoritmo, o que acontece dentro do algoritmo.
+
+**Regras básicas**:
+
+- A maioria dos primitivos (booleans, numbers, undefined, null) são constantes, ou seja, ocupam um espaço fixo na memória;
+- Strings ocupam um espaço de memória proporcional ao tamanho da string, sendo assim, requerem um espaço O(_n_), onde _n_ é o tamanho da string;
+- Tipos de referência são, geralmente, O(_n_), onde _n_ é o tamanho do array (para arrays) ou o número de chaves (no objeto).
+
+Observando um exemplo para analisar a complexidade de espaço:
+
+```js
+function sum(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+```
+
+Bem, não importa qual seja o comprimento do array, temos uma variável chamada _total_ (1 número) e então estamos fazendo um loop, que tem uma segunda declaração dentro dele (outro número).
+
+Essa função só tem duas variáveis e não estamos adicionando novas variáveis com base no comprimento do array. Isso significa que temos um espaço constante, ou seja, O(1).
+
+Outro exemplo:
+
+```js
+function double(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]);
+  }
+  return newArr;
+}
+```
+
+À medida que o comprimento do array cresce, o comprimento do novo array (uma matriz) também cresce. Na linha <code>let newArr = [] </code> vamos criar uma nova matriz, mas isso não é tão significativo quanto <code>newArr.push(2 \* arr[i]);</code>, onde temos essa nova matriz e ela está ficando cada vez mais longa diretamente na proporção do comprimento da entrada. Logo, se a matriz tiver 10 itens, estamos armazenando 10 itens em uma nova matriz.
+
+Sendo assim, o espaço ocupado será diretamente proporcional ao tamanho da entrada, ou seja, O(_n_).
