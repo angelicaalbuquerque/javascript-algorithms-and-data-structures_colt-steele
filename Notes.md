@@ -261,4 +261,4 @@ function double(arr) {
 
 Sendo assim, o espaço ocupado será diretamente proporcional ao tamanho da entrada, ou seja, O(_n_).
 
-### Logs e Recapitulação
+<!-- ### Logs e Recapitulação -->
