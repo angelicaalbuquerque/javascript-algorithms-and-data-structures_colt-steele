@@ -241,7 +241,7 @@ function sum(arr) {
 }
 ```
 
-Bem, não importa qual seja o comprimento do array, temos uma variável chamada _total_ (1 número) e então estamos fazendo um loop, que tem uma segunda declaração dentro dele (outro número).
+Bem, não importa qual seja o comprimento do array, temos uma variável chamada _total_ (1 número) e então estamos fazendo um _loop_, que tem uma segunda declaração dentro dele (outro número).
 
 Essa função só tem duas variáveis e não estamos adicionando novas variáveis com base no comprimento do array. Isso significa que temos um espaço constante, ou seja, O(1).
 
