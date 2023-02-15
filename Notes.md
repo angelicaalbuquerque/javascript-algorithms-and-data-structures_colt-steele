@@ -309,3 +309,14 @@ Entretanto, o cálculo exato não é tão importante. O que importa é que, se o
 - Notação Big O não liga para precisão, apenas para tendências gerais (linear? quadrática? constante?);
 - A complexidade do espaço ou tempo, medida pelo Big O, depende apenas do algoritmo e não do hardware que utilizamos para executá-lo;
 - Big O está em todo lugar e precisamos praticar.
+
+# Seção 2: Análise de performance de arrays e objetos
+
+Agora que já vimos Big O, vamos analisar coisas básicas que fazemos o tempo inteiro em JS: arrays,  objetos e métodos built-in. Como é a performance? Qual método pode ser mais lento? Quais são as coisas mais rápidas que podemos fazer com um array?
+
+Objetivos desta seção:
+
+- Entender como objetos e arrays trabalham, através das lentes do Big O;
+- Explicar por que adicionar elementos ao início de um array é custoso;
+- Comparar e contrastra o tempo de execução de arrays e objetos, assim como métodos built-in (como forEach e Object.keys()...).
+
