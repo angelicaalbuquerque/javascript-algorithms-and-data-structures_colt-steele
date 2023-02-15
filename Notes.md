@@ -261,4 +261,51 @@ function double(arr) {
 
 Sendo assim, o espaço ocupado será diretamente proporcional ao tamanho da entrada, ou seja, O(_n_).
 
-<!-- ### Logs e Recapitulação -->
+### Logs
+
+Vimos até aqui algumas complexidades comuns: O(1), O(_n_) e O(_n²_). Entretanto, algumas vezes expressões big O envolvem expressões matemáticas mais complexas. Uma das que aparecem com muita frequência é o logaritmo.
+
+Em vez da complexidade do tempo desses algoritmos terminar em O(_n_), eles podem terminar em O(log _n_).
+
+#### O que é logaritmo?
+
+Assim como divisão e multiplicação são um par, logaritmo e exponenciação são também um par. O logaritmo é o inverso da exponenciação.
+
+Exemplo:
+
+<code>Log2(8) = 3</code>
+
+A leitura é feita como logaritmo de 8 na base 2 é igual a 3. E o que estamos calculando é que se elevarmos 2 a algo, que algo é esse que nos dará 8?
+
+A resposta é 3. Se elevarmos 2 ao cubo, obteremos 8 (2³ = 8). Logo:
+
+<code>log2(valor) = expoente</code> É respondido por <code>2^expoente = valor</code>.
+
+> 💡 A base do logaritmo nem sempre é 2. Podemos ter logaritmos na base 10, na base 3, na base 5, etc. Mas a base 2 é a mais comum. Podemos omitir o 2 da fórmula, já que é a base mais comum, então podemos escrever apenas <code>log</code>.
+
+> 💡 O logaritmo de um numero aproximadamente mede o número de vezes que você pode dividir esse número por 2 **antes de chegar a um valor que é menor ou igual a 1**.
+
+Então, se tivermos um 8, dividiremos por 2 e ainda será maior que 1 (4). Se dividirmos de novo, continuará maior que 1 (2). Então alcançamos o valor 1, e não podemos dividir mais. Então, o logaritmo de 8 é 3.
+
+Vejamos melhor o exemplo:
+
+<div align="left">
+    <img src=".github/02-log.png" width="500"/>
+</div>
+
+Entretanto, o cálculo exato não é tão importante. O que importa é que, se olharmos para o gráfico anteriormente mostrado aqui, podemos perceber que a complexidade de tempo logarítmica é ótima! Depois da constante O(1), é a melhor complexidade de tempo que podemos ter.
+
+#### Por que isso importa?
+
+- Certos algoritmos têm complexidade de tempo logarítmica;
+- Algoritmos de ordenação eficientes envolvem logaritmos;
+- Recursão às vezes envolve complexidade de espaço logarítmica.
+
+### 📌 Recapitulação Notação Big O
+
+- Para analisar o desempenho de um algoritmo, nós utilizamos Notação Big O;
+  - _Queremos saber como o tempo muda ou como a complexidade do espaço muda à medida que o tamanho da entrada aumenta._
+- Big O pode nos dar um entendimento de alto nível de complexidade de tempo ou espaço de um algoritmo;
+- Notação Big O não liga para precisão, apenas para tendências gerais (linear? quadrática? constante?);
+- A complexidade do espaço ou tempo, medida pelo Big O, depende apenas do algoritmo e não do hardware que utilizamos para executá-lo;
+- Big O está em todo lugar e precisamos praticar.
