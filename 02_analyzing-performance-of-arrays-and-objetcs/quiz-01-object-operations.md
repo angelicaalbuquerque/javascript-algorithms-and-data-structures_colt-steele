@@ -12,6 +12,7 @@ What is the big O for accessing a key in an object?
 
 - <span style="color:green">O(1)</span>
 - O(n)
+- O(n/2)
 
 ### Pergunta 3:
 
