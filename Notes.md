@@ -312,7 +312,7 @@ Entretanto, o cálculo exato não é tão importante. O que importa é que, se o
 
 # Seção 2: Análise de performance de arrays e objetos
 
-Agora que já vimos Big O, vamos analisar coisas básicas que fazemos o tempo inteiro em JS: arrays,  objetos e métodos built-in. Como é a performance? Qual método pode ser mais lento? Quais são as coisas mais rápidas que podemos fazer com um array?
+Agora que já vimos Big O, vamos analisar coisas básicas que fazemos o tempo inteiro em JS: arrays, objetos e métodos built-in. Como é a performance? Qual método pode ser mais lento? Quais são as coisas mais rápidas que podemos fazer com um array?
 
 Objetivos desta seção:
 
@@ -320,3 +320,39 @@ Objetivos desta seção:
 - Explicar por que adicionar elementos ao início de um array é custoso;
 - Comparar e contrastra o tempo de execução de arrays e objetos, assim como métodos built-in (como forEach e Object.keys()...).
 
+### The Big O de objetos
+
+Objetos são estruturas de dados não ordenadas e tudo é armazenado em pares de valores-chave. Exemplo:
+
+```js
+let instructor = {
+  firstName: "Kelly",
+  isInstructor: true,
+  favoriteNumbers: [1, 2, 3, 4],
+};
+```
+
+#### Quando utilizar objetos:
+
+- Quando não precisamos de ordem, objetos são uma escolha excelente;
+- Quando precisamos de rápido acesso / inserção e remoção.
+
+Quando falamos em rapidez, estamos falando de tempo constante para quase todas as ações:
+
+- Inserção: O(1);
+- Remoção: O(1);
+- Busca: O(N);
+- Acesso: O(1).
+
+O tempo de busca é O(N) porque, para buscar um valor, precisamos percorrer todo o objeto para ver se aquele valor existe. E se potencialmente o número de propriedades cresce à medida que N cresce, logo cresce a quantidade de tempo que leva para fazer essa busca. Entretanto, se quisermos acessar um valor, o tempo de acesso é O(1), pois não precisamos percorrer todo o objeto para encontrar aquele valor.
+
+#### Big I de métodos de objetos
+
+- Object.keys: O(N);
+  - _Retorna todas as chaves de um objeto. O(N) porque precisamos percorrer todo o objeto para encontrar todas as chaves._
+- Object.values: O(N);
+  - _Retorna todos os valores de um objeto. O(N) porque precisamos percorrer todo o objeto para encontrar todos os valores._
+- Object.entries: O(N);
+  - _Retorna um array de arrays contendo todas as chaves e valores de um objeto. O(N) porque precisamos percorrer todo o objeto para encontrar todas as chaves e valores, o que torna esse método mais trabalhoso._
+- hasOwnProperty: O(1).
+  - _Verifica se um objeto possui uma determinada chave. O(1) porque não precisamos percorrer todo o objeto para encontrar a chave._
