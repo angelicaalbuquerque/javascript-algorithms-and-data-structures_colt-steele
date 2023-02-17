@@ -378,3 +378,33 @@ Quando utilizar arrays:
   - _Para acessar um elemento em um array, o tempo de acesso é O(1), pois não precisamos percorrer todo o array para encontrar aquele elemento, podemos pular imediatamente para o index, independentemente do tamanho do array._
 
 > 💡 push() e pop() são métodos que adicionam e removem elementos do final do array, respectivamente, e são mais rápidos que shift() e unshift(), métodos que adicionam e removem elementos do início do array, respectivamente.
+
+#### Big O de métodos de arrays
+
+- push: O(1);
+  - _Adiciona um elemento ao final do array. O(1) porque não precisamos percorrer todo o array para encontrar o final, podemos pular imediatamente para o último index, independentemente do tamanho do array._
+- pop: O(1);
+  - _Remove um elemento do final do array. O(1) porque não precisamos percorrer todo o array para encontrar o final, podemos pular imediatamente para o último index, independentemente do tamanho do array._
+- shift: O(N);
+  - _Remove um elemento do início do array. O(N) porque os índices precisarão ser reindexados._
+- unshift: O(N);
+  - _Adiciona um elemento ao início do array. O(N) porque os índices precisarão ser reindexados._
+- concat: O(N);
+  - _Concatena dois arrays. O(N) porque à medida que os arrays crescem, o tempo vai demorar e crescer proporcionalmente ao tamanho total do novo array. Tecnicamente, poderíamos argumentar que a complexidade deveria ser O(N + m), onde m é o tamanho do novo array, mas O(N) já serve._
+- slice: O(N);
+  - _Retorna uma cópia de uma parte de um array. O(N) porque se tentarmos copiar 10 elementos vs 1000 elementos de um array, a quantidade de tempo irá aumentar proporcionalmente ao tamanho da cópia ou de quantos elementos estamos tentando copiar._
+- splice: O(N);
+  - _Remove e/ou adiciona elementos de um array e, opcionalmente, os substitui por outros elementos. O(N) porque vai ser preciso reindexar os elementos._
+- sort: O(N \* log N);
+  - _Ordena os elementos de um array. O(N \* log N) porque o algoritmo de ordenação é baseado em comparações, e o tempo de comparação é O(log N)._
+- forEach/map/filter/reduce/etc: O(N);
+  - _Esses métodos iteram sobre cada elemento de um array. O(N) porque eles estão fazendo looping sobre cada elemento ou fazendo algo para cada elemento, seja um teste booleano ou apenas imprimindo o que estamos fazendo, isso envolve atuar em cada elemento ou com cada elemento. Assim, à medida que o tamanho do array aumenta, aumenta a quantidade de tempo que leva para percorrê-lo._
+
+### 📌 Recapitulação Arrays e Objetos
+
+- Quase tudo o que podemos fazer com arrays, todos os métodos incorporados, tem complexidade O(N);
+- Ordenação é o mais lento, O(N \* log N);
+- Os métodos push e pop são costantes, O(1), super rápidos;
+- Objetos são rápidos em praticamente tudo, mas não há ordem para os arrays, que são ótimos quando você precisa de ordenação;
+- Arrays são ótimos para ordenação, mas lembre-se que é melhor se você puder fazer adições e remoções no final do array, pois é mais rápido do que no início;
+- Adicionar/remover algo tanto no começo quanto no meio de um array causa um efeito cascata de reindexação.
