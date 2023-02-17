@@ -84,6 +84,6 @@ function subtotals(array) {
 }
 ```
 
-- <span style="color:green">0(n)</span>
 - 0(n)
 - 0(n^2)
+- <span style="color:green">0(n)</span>
