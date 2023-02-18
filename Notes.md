@@ -221,7 +221,7 @@ Até agora, nos preocupamos apenas com a complexidade do tempo, sobre a rapidez 
 
 Mas também podemos nos preocupar com a complexidade do espaço, que é o que acontece com o espaço que um algoritmo ocupa à medida que o tamanho da entrada aumenta. Quanto de memória adicional precisamos alocar para executar o código em nosso algoritmo?
 
-à medida que _n_ cresce, assumimos que o resultado final vai crescer Portanto, não vamos nos preocupar com esse espaço, vamos nos preocupar com as repercussões que têm dentro do algoritmo, o que acontece dentro do algoritmo.
+À medida que _n_ cresce, assumimos que o resultado final vai crescer. Portanto, não vamos nos preocupar com esse espaço, vamos nos preocupar com as repercussões que têm dentro do algoritmo, o que acontece dentro do algoritmo.
 
 **Regras básicas**:
 
