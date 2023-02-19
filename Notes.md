@@ -408,3 +408,5 @@ Quando utilizar arrays:
 - Objetos são rápidos em praticamente tudo, mas não há ordem para os arrays, que são ótimos quando você precisa de ordenação;
 - Arrays são ótimos para ordenação, mas lembre-se que é melhor se você puder fazer adições e remoções no final do array, pois é mais rápido do que no início;
 - Adicionar/remover algo tanto no começo quanto no meio de um array causa um efeito cascata de reindexação.
+
+# Seção 3: Abordagem de Resolução de Problemas
