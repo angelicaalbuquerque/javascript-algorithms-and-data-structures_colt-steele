@@ -410,3 +410,37 @@ Quando utilizar arrays:
 - Adicionar/remover algo tanto no começo quanto no meio de um array causa um efeito cascata de reindexação.
 
 # Seção 3: Abordagem de Resolução de Problemas
+
+Quando encaramos um problema de código para resolver, é importante que tenhamos uma abordagem para resolver esse problema. Que passos podemos seguir para torná-lo resolvido?
+
+_Esta primeira seção é mais sobre a abordagem básica para resolver um problema que você não sabe resolver. Passos que você pode dar, etapas para torná-lo mais fácil. A segunda seção que vem depois dessa é mais focada em código e é sobre projetos específicos e pequenas estratégias para resolver problemas._
+
+Objetos da seção:
+
+- Definição de algoritmo;
+- Elaborar um plano para resolver algoritmos;
+- Comparar e contrastar padrões de resoluções de problemas, incluindo contadores de frequência, dividir e conquistar e técnica two pointers.
+
+### O que é um algoritmo?
+
+Um **processo** ou um **conjunto de etapas** para realizar uma determinada tarefa.
+
+Por que é importante saber disso?
+
+- Quase tudo o que você faz em programação envolve algum tipo de algoritmo, sejam coisas super básicas ou um aplicativo complexo;
+- É o fundamento para ser um solucionador de problemas de sucesso e um bom programador.
+
+Como melhorar suas habilidades?
+
+- Estabeleça um plano para resolver problemas;
+- Domine os padrões comuns de resolução de problemas.
+
+### Estratégias de resolução de problemas
+
+- 1. Entenda o problema;
+- 2. Explore exemplos concretos;
+- 3. Quebre-o em partes menores;
+- 4. Resolva/simplifique o problema;
+- 5. Olha para trás, refatore e melhore o código.
+
+Nesta seção, vamos explorar cada uma dessas etapas em detalhes.
