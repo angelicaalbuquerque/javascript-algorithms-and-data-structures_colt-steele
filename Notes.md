@@ -483,3 +483,72 @@ Se alguém não passar um número, retornamos um null? adicionamos um 0? o que f
 
 _5) Como devo rotular as peças importantes de dados que são parte do problema?_
 Talvez o nome da função seja _add_, e os parâmetros sejam _num1_ e _num2_, e _sum_ seja o resultado.
+
+## Passo 2) Explore exemplos concretos
+
+Depois de entender o problema, garantindo que sabemos todas as entradas/saídas e o que estamos resolvendo, agora é a vez de surgir com exemplos que podem ajudar a entender melhor o problema.
+
+Exemplos também fornecem as verificações para qeu sua solução eventual, se você tiver uma, funcione como esperado.
+
+Portanto, se você tiver exemplos, poderá verificar se sua solução funciona, e também poderá obter mais informações executando esses exemplos.
+
+Isso se aplica em uma escala maior, como User Stories e Testes Unitários, mas é importante ter exemplos concretos para ajudar a entender o problema.
+
+#### Passos para explorar exemplos concretos:
+
+1. Comece com exemplos simples;
+   - Agora, anote dois ou três exemplos simples com uma entrada e depois a saída. Exemplos mais simples, os que devem fazer você conhecer os casos de uso mais fáceis, progridem.
+2. Progrida para exemplos mais complexos;
+3. Explore exemplos com entradas vazias;
+   - Isso deve dar insights de como o problema deve funcionar.
+4. Explore exemplos com entradas inválidas;
+   - O que acontece se o usuário inserir algo inválido?
+
+#### Exemplo: Escreva uma função que pega uma string e retorna a contagem de cada caractere nessa string.
+
+Depois de fazer todos os passos da seção anterior, de reafirmar o problema/ver entradas e saídas/como rotular as terminologias, vamos começar a coletar os exemplos concretos pra solucionar esse problema acima.
+
+**1. Comece com exemplos simples;**
+
+- _"a" -> {a: 1}_
+- _"aa" -> {a: 2}_
+
+Exemplo 1:
+
+```js
+charCount("aaaa"); // deve retornar {a: 4}
+```
+
+Exemplo 2:
+
+```js
+charCount("hello"); // deve retornar {h: 1, e: 1, l: 2, o: 1}
+```
+
+Exemplo 3:
+
+```js
+charCount("aaaa"); // deve retornar {a: 4, b: 0, c: 0, d: 0}
+```
+
+**2. Progrida para exemplos mais complexos;**
+
+- _"my phone number is 182763"_ - Se isso fosse um input, o que esperamos de retorno? Vamos contar os espaços? E caracteres especiais? E números? Tudo isso seria contado?
+
+- _"Hello hi"_ - Armazenamos uma letra H maiúscula e uma H minúscula? Ou apenas uma delas?
+
+Esses exemplos são realmente apenas outra forma de entender melhor o problema antes de resolvê-lo. Então, isso se vincula muito ao vídeo anterior, compreendendo a pergunta.
+
+**3. Explore exemplos com entradas vazias;**
+
+```js
+charCount("");
+```
+
+Devemos retornar um objeto vazio ({}) no final? Ou devemos retornar null, false ou undefined? Ou devemos retornar um erro?
+
+E isso está atrelado ao próximo passo, que é explorar exemplos com entradas inválidas.
+
+**4. Explore exemplos com entradas inválidas;**
+
+E se a pessoa passar algo que não é uma string?
