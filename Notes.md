@@ -466,3 +466,20 @@ Tem diversas perguntas que você pode fazer para ajudar a garantir que você ent
 4. As saídas podem ser determinadas a partir das entradas? Em outras palavras, você tem todas as informações necessárias para resolver o problema?
 5. Como devo rotular as peças importantes de dados que são parte do problema?
    - _Qual a terminologia que você deve usar._
+
+#### Exemplo: Escreva uma função que pega dois números e retorna a soma deles.
+
+_1) Posso reafirmar o problema com minhas próprias palavras?_
+Implementar adição.
+
+_2) Quais são as entradas que o problema requer?_
+Não são simplesmente dois números. Serão inteiros? Floats? O que dizer sobre string para números maiores?
+
+_3) Quais são as saídas que devem vir da solução do problema?_
+Não é simplesmente o resultado. Serão inteiro? Float? String?
+
+_4) As saídas podem ser determinadas a partir das entradas? Em outras palavras, você tem todas as informações necessárias para resolver o problema?_
+Se alguém não passar um número, retornamos um null? adicionamos um 0? o que faremos?
+
+_5) Como devo rotular as peças importantes de dados que são parte do problema?_
+Talvez o nome da função seja _add_, e os parâmetros sejam _num1_ e _num2_, e _sum_ seja o resultado.
