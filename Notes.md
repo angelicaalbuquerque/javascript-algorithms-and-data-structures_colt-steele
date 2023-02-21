@@ -411,6 +411,8 @@ Quando utilizar arrays:
 
 # Seção 3: Abordagem de Resolução de Problemas
 
+> 💡 Muitas das estratégias que vamos discutir são baseadas no livro **_How To Solve It_**, de George Polya.
+
 Quando encaramos um problema de código para resolver, é importante que tenhamos uma abordagem para resolver esse problema. Que passos podemos seguir para torná-lo resolvido?
 
 _Esta primeira seção é mais sobre a abordagem básica para resolver um problema que você não sabe resolver. Passos que você pode dar, etapas para torná-lo mais fácil. A segunda seção que vem depois dessa é mais focada em código e é sobre projetos específicos e pequenas estratégias para resolver problemas._
@@ -444,3 +446,23 @@ Como melhorar suas habilidades?
 - 5. Olha para trás, refatore e melhore o código.
 
 Nesta seção, vamos explorar cada uma dessas etapas em detalhes.
+
+## Passo 1) Entenda o problema
+
+_Você pode criar um aplicativo copiando um passo a passo e copiar o código de outras pessoas. Mas quando se trata de resolver problemas novos e novos desafios, a coisa fica mais difícil._
+
+_Você melhora isso com o tempo, independentemente das tecnologias que você usa, da linguagem em que está trabalhando, é realmente importante ter um forte conjunto de habilidades para resolver problemas. E muito disso virá naturalmente com o tempo, mas vale a pena ser deliberado, vale a pena ter um plano. Esse plano não vai resolver seus problemas, mas vai ajudá-lo a pensar para resolvê-lo e ajudar as soluções surgirem de maneira mais natural._
+
+Antes de começar a sair codando ou tentar resolver o problema, é importante dar um passo atrás e garantir que você entende a tarefa que está à sua frente. O que você está tentando resolver? O que você está tentando fazer? O que você está tentando construir?
+
+Tem diversas perguntas que você pode fazer para ajudar a garantir que você entenda o problema:
+
+1. Você pode reafirmar o problema com suas próprias palavras?
+   - _Apenas certifique-se de que você pode reformular novamente a pergunta. Mude um pouco, com suas próprias palavras, para garantir que você realmente entenda a pergunta._
+2. Quais são as entradas que o problema requer?
+   - _Quais são os dados que você precisa para resolver o problema._
+3. Quais são as saídas que devem vir da solução do problema?
+   - _Quais são os resultados que você precisa gerar ao resolver o problema._
+4. As saídas podem ser determinadas a partir das entradas? Em outras palavras, você tem todas as informações necessárias para resolver o problema?
+5. Como devo rotular as peças importantes de dados que são parte do problema?
+   - _Qual a terminologia que você deve usar._
