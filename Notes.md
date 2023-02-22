@@ -552,3 +552,68 @@ E isso está atrelado ao próximo passo, que é explorar exemplos com entradas i
 **4. Explore exemplos com entradas inválidas;**
 
 E se a pessoa passar algo que não é uma string?
+
+## Passo 3) Quebre o problema em partes
+
+Tome as medidas reais do problema e anote-as. Não precisa do pseudo-código completo, não precisa ser válido, você conhece a sintaxe. Faça apenas alguns comentários como um guia para as etapas que eles precisam seguir.
+
+Especialmente em ambientes de entrevista, é importante que você comunique o que está fazendo, eles não querem que você apenas comece a digitar ou escreva código em silêncio. É melhor você sempre informar "Beleza, esses são os passos que eu vou seguir. Você acha que isso pode funcionar?".
+
+Portanto, quebrar o problema é muito importante e **escreva explicitamente os passos que você precisa seguir.**
+
+> 💡 Não precisa ser uma tonelada de detalhes, nem uma linha por linha, toda linha que você precisa para escrever. Apenas os componentes básicos da solução.
+
+> 💡 Isso força você a pensar sobre o código que você irá escrever antes de escrevê-lo, e ajuda você a capturar ou descobrir algumas dúvidas remanescentes ou a conhecer partes que você tem medo e que não entende.
+
+Isso tudo ajuda você a definir as etapas, a manter o foco e a destacar os problemas dos quais você ainda não está confiante sobre. Então, você pode mergulhar e começar a escrever o código.
+
+#### Exemplo: Escreva uma função que pega uma string e retorna a contagem de cada caractere nessa string.
+
+Depois de ter os exemplos, comece a digitar o esqueleto da função, e anote os passos que você precisa seguir.
+
+```js
+function charCount(str) {
+  // fazer algo
+  // retornar algo - um objeto com chaves que são caracteres alfanuméricos minúsculos na string; valores devem ser a contagem para cada caractere
+}
+```
+
+```js
+function charCount("Your PIN number is 1234!") {
+  /*
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    b: 1,
+    e: 1,
+    i: 2,
+    m: 1,
+    n: 2,
+    o: 1,
+    p: 1,
+    r: 2,
+    s: 1,
+    u: 2,
+    y: 1
+  */
+}
+```
+
+Expandindo o pensamento, precisamos fazer algo uma vez para cada caractere na string. Também precisamos criar um objeto que retorna no final. Mas a maior parte da lógica envolve repetir todos os caracteres da string e fazer algo.
+
+```js
+function charCount(str) {
+  // fazer objeto retornar no final
+  // loop na string, para cada caractere...
+  // se o char é um número/uma letra E uma chave no objeto, adicione um a ela
+  //se o char é um número/uma letra E não estiver no objeto, adicione-o e defina seu valor como 1
+  //Se o caractere for qualquer outra coisa (espaço, ponto, vírgula, etc.), não faça nada
+  // ---
+  // retornar objeto no final
+}
+```
+
+Agora com esses passos básicos, podemos preencher os espaços em branco. Para problemas mais complicados, isso realmente pode ser um salva-vidas.
+
+> 💡 Em uma entrevista, se você escreve as etapas que você precisa fazer, mesmo que não tenha certeza de como fazer, demonstra que você pelo menos formulou uma abordagem e se ficar sem tempo e só chegar na metade do caminho, você pelo menos tem o layout do que iria fazer.
