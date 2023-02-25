@@ -488,7 +488,7 @@ Talvez o nome da função seja _add_, e os parâmetros sejam _num1_ e _num2_, e 
 
 Depois de entender o problema, garantindo que sabemos todas as entradas/saídas e o que estamos resolvendo, agora é a vez de surgir com exemplos que podem ajudar a entender melhor o problema.
 
-Exemplos também fornecem as verificações para qeu sua solução eventual, se você tiver uma, funcione como esperado.
+Exemplos também fornecem as verificações para que sua solução eventual, se você tiver uma, funcione como esperado.
 
 Portanto, se você tiver exemplos, poderá verificar se sua solução funciona, e também poderá obter mais informações executando esses exemplos.
 
