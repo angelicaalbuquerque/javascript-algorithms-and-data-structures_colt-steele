@@ -618,4 +618,4 @@ Agora com esses passos básicos, podemos preencher os espaços em branco. Para p
 
 > 💡 Em uma entrevista, se você escreve as etapas que você precisa fazer, mesmo que não tenha certeza de como fazer, demonstra que você pelo menos formulou uma abordagem e se ficar sem tempo e só chegar na metade do caminho, você pelo menos tem o layout do que iria fazer.
 
-<!-- ## Passo 4) Resolva e simplifique -->
+## Passo 4) Resolva e simplifique
