@@ -611,6 +611,7 @@ function charCount(str) {
   //Se o caractere for qualquer outra coisa (espaço, ponto, vírgula, etc.), não faça nada
   // ---
   // retornar objeto no final
+  
 }
 ```
 
