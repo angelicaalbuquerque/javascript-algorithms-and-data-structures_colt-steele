@@ -1,3 +1,4 @@
+
 # Seção 1: Big O Notation
 
 > 💡 Performance importa.
