@@ -1,6 +1,6 @@
 ### Pergunta 1:
 
-What is the big O for adding a key and value into an object?
+What is the big O for pushing into an array?
 
 - <span style="color:green">O(1)</span>
 - O(n)
@@ -8,15 +8,12 @@ What is the big O for adding a key and value into an object?
 
 ### Pergunta 2:
 
-What is the big O for accessing a key in an object?
-
-- <span style="color:green">O(1)</span>
-- O(n)
+What is the big O for shifting into an array?
 
 ### Pergunta 3:
 
-What is the big O of removing a key in an object?
+What is the big O for the forEach function?
 
-- O(n)
-- <span style="color:green">O(1)</span>
+- <span style="color:green">O(n)</span>
+- O(1)
 - O(n^2)
