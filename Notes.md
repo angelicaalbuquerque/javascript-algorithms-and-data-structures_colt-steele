@@ -620,4 +620,99 @@ Agora com esses passos básicos, podemos preencher os espaços em branco. Para p
 
 > 💡 Em uma entrevista, se você escreve as etapas que você precisa fazer, mesmo que não tenha certeza de como fazer, demonstra que você pelo menos formulou uma abordagem e se ficar sem tempo e só chegar na metade do caminho, você pelo menos tem o layout do que iria fazer.
 
-<!-- ## Passo 4) Resolva e simplifique -->
+## Passo 4) Resolva e simplifique
+
+Às vezes, você pode não estar pronto para resolver um problema inteiro de uma vez. Você pode se sentir bem em cerca de 80%, mas se há algo desafiador ou que você não tem certeza de como fazer, então é aí que a simplificação vem.
+
+> 💡 Tente ignorar a parte que está lhe dando muito trabalho e foque em outra coisa que você consiga fazer, em vez de ficar preso em uma parte difícil de um problema e não ter nenhum progresso. É muito melhor começar a escrever código para fazer as coisas que você sabe fazer em vez de ficar travando a tarefa.  
+
+Então, como vantagens da resolução/simplificação, podemos dizer que: 
+- É muito melhor começar a escrever código para fazer as coisas que você sabe fazer, lembrando que você precisa incorporar essa parte mais difícil depois.
+- É bastante comum que, ao simplificar um problema, você obtenha informações sobre a solução real.
+
+Então, se você ficar preso em alguma coisa, mas sabe por onde começar ou conhece um lugar para começar, você deve fazer isso. Óbvio, depois de ter entendido o problema, feito exemplos concretos e dividiu o problema em passos.
+
+#### Quanto à simplificação:
+
+- Encontre a principal dificuldade no que está tentando fazer;
+- Ignore temporariamente essa dificuldade;
+- Escreva uma solução simplificada;
+- Então incorpore essa dificuldade de volta.
+
+#### Exemplo: Escreva uma função que pega uma string e retorna a contagem de cada caractere nessa string
+
+```js
+function charCount(str) {
+  // fazer objeto retornar no final
+  // loop na string, para cada caractere...
+  // se o char é um número/uma letra E uma chave no objeto, adicione um a ela
+  //se o char é um número/uma letra E não estiver no objeto, adicione-o e defina seu valor como 1
+  //Se o caractere for qualquer outra coisa (espaço, ponto, vírgula, etc.), não faça nada
+  // ---
+  // retornar objeto no final
+  
+}
+```
+
+Tem muitas coisas que podem ser problemáticas aqui. Por exemplo, se alguém tiver problema com loop, poderia começar criando um objeto e trabalhando com o primeiro caractere de uma string. E uma vez que você descobrir como lidar com uma string, você passa para letras minúsculas, adicionada a letra ao objeto etc.
+
+Se a pessoa não souber trabalhar com objeto chave/valor, poderia começar com o loop para cada caracteres dessa string e imprimí-los.
+
+Ou você pode não se lembrar o metodo que transforma uma palavra em maiúscula ou minúscula, então poderia ignorar isso e começar com a lógica principal.
+
+No exemplo abaixo, começamos criando o objeto, fazendo o loop ignorando a parte da alfanumérica, verificando apenas se o caractere está no objeto.
+
+```js
+function charCount(str) {
+  // fazer objeto retornar no final
+  var result = {};
+  // loop na string, para cada caractere...
+  for (var i = 0; i < str.length(); i++) {
+    var char = string[i]
+    // se o char é um número/uma letra E uma chave no objeto, adicione um a ela
+    if(result[char] > 0) {
+      result[char]++;
+    //se o char é um número/uma letra E não estiver no objeto, adicione-o e defina seu valor como 1
+    } else {
+      result[char] = 1;
+    }
+  }
+  //Se o caractere for qualquer outra coisa (espaço, ponto, vírgula, etc.), não faça nada
+  // retornar objeto no final
+  return result;
+}
+```
+
+Agora que temos isso pronto, podemos descobrir como fazer as letras ficarem minúsculas ou maiúsculas.
+
+
+```js
+function charCount(str) {
+  // fazer objeto retornar no final
+  var result = {};
+  // loop na string, para cada caractere...
+  for (var i = 0; i < str.length(); i++) {
+    var char = string[i].toLowerCase()
+    // se o char é um número/uma letra E uma chave no objeto, adicione um a ela
+    if(result[char] > 0) {
+      result[char]++;
+    //se o char é um número/uma letra E não estiver no objeto, adicione-o e defina seu valor como 1
+    } else {
+      result[char] = 1;
+    }
+  }
+  //Se o caractere for qualquer outra coisa (espaço, ponto, vírgula, etc.), não faça nada
+  // retornar objeto no final
+  return result;
+}
+```
+No final do dia, mesmo que não esteja tudo perfeito, nós escrevemos o que conseguimos, acrescentamos coisas ao objeto, criamos condicionais e agora sabemos que precisamos de uma maneira para tentar trabalhar com os caracteres alfanuméricos.
+
+Se você anda, demonstra que você sabe e demonstra sua capacidade de resolver problemas, em vez de apenas ficar fixado ao problema antes mesmo de começar.
+
+> ❗ É muito melhor escrever algo racionalmente, não só colocar coisas na página e esperar que funcione. Mas coloque as peças certas no lugar para que, depois de descobrir a parte mais difícil, você possa conectá-la.
+
+## Passo 5) Resolva e simplifique
+
+Provavelmente, este é o passo mais importante de quando se trata de se tornar um desenvolvedor melhor.
+
