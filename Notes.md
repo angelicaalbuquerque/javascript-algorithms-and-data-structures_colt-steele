@@ -575,7 +575,8 @@ Depois de ter os exemplos, comece a digitar o esqueleto da função, e anote os 
 ```js
 function charCount(str) {
   // fazer algo
-  // retornar algo - um objeto com chaves que são caracteres alfanuméricos minúsculos na string; valores devem ser a contagem para cada caractere
+  // retornar algo - um objeto com chaves que são caracteres alfanuméricos minúsculos na string; 
+  //valores devem ser a contagem para cada caractere
 }
 ```
 
@@ -864,6 +865,18 @@ function isAlphaNumeric(char) {
 charCodeAt(0);
 ```
 
+### 📌 Recapitulação de Abordagem de Resolução de Problemas
 
+Seja para uma entrevista ou por conta própria, você é desafiado a descobrir como resolver um problema. Esses são os passos que deveriam ser seguidos:
 
+1. **Certifique-se de entender o problema**
+    - Faça perguntas ao entrevistador, clarifique o problema. Certifique que você também o entendeu para pensar em uma solução, como a aplicação deve operar, como deve se comportar em todos os cenários e que isso acompanha o próximo passo.
+2. **Explore exemplos concretos** 
+    - Ambos os primeiros pontos são sobre entender o problema. Saber quais são as entradas, as saídas, os casos extremos, como lidar com erros que acontecem quando o usuário digita algo inválido. Entender como tudo deve funcionar desde o início.
+3. **Quebre o problema**  
+    - Neste ponto, se você quiser escrever como pseudo-código totalmente perfeito, linha por linha, pode fazer isso ou apenas seguir algumas etapas para definir um plano para o código que você precisa implementar. **Ajuda a saber para onde está indo antes mesmo de começar a digitar o código**.
+4. **Resolva/Simplique**    
+    - Se você não conseguir resolver o problema imediatamente, resolva um problema que possa. Mesmo que seja mais simples, se você simplificar, removerá algum desafio da dificuldade principal e tentará resolver algo em que possa reincorporar essa dificuldade principal novamente.
+5. **Olhe para trás e refatore** 
+    - Na maioria das vezes, há espaço para refatorar, mesmo se você for um desenvolvedor totalmente experiente.
 
