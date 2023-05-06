@@ -667,8 +667,8 @@ function charCount(str) {
   // fazer objeto retornar no final
   var result = {};
   // loop na string, para cada caractere...
-  for (var i = 0; i < str.length(); i++) {
-    var char = string[i]
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i]
     // se o char é um número/uma letra E uma chave no objeto, adicione um a ela
     if(result[char] > 0) {
       result[char]++;
@@ -685,14 +685,13 @@ function charCount(str) {
 
 Agora que temos isso pronto, podemos descobrir como fazer as letras ficarem minúsculas ou maiúsculas.
 
-
 ```js
 function charCount(str) {
   // fazer objeto retornar no final
   var result = {};
   // loop na string, para cada caractere...
-  for (var i = 0; i < str.length(); i++) {
-    var char = string[i].toLowerCase()
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i].toLowerCase()
     // se o char é um número/uma letra E uma chave no objeto, adicione um a ela
     if(result[char] > 0) {
       result[char]++;
@@ -712,7 +711,159 @@ Se você anda, demonstra que você sabe e demonstra sua capacidade de resolver p
 
 > ❗ É muito melhor escrever algo racionalmente, não só colocar coisas na página e esperar que funcione. Mas coloque as peças certas no lugar para que, depois de descobrir a parte mais difícil, você possa conectá-la.
 
-## Passo 5) Resolva e simplifique
+## Passo 5) É olhar para trás e refatorar
+
+> Parabéns por ter resolvido o problema! Mas você ainda não acabou.
 
 Provavelmente, este é o passo mais importante de quando se trata de se tornar um desenvolvedor melhor.
+
+É importante tentar melhorar o código. É uma oportunidade perdida se você não reservar um tempo para analisar seu código, analisar e refletir sobre ele. E não só sobre como ele é eficiente, mas também como está a legibilidade.
+
+Ao concluir uma tarefa, é importante se perguntas:
+
+1. Você pode checar o resultado para garantir que o código funcione?
+2. Você pode gerar o resultado de forma diferente?
+3. Você pode usar o resultado ou o método para outro problema?
+4. Você pode melhorar a performance da sua solução?
+5. Você pode pensar em outros jeitos de refatorar?
+6. Como outras pessoas resolveriam esse problema?
+
+#### Continuando o exemplo anterior: Escreva uma função que pega uma string e retorna a contagem de cada caractere nessa string
+
+```js
+function charCount(str) {
+  var obj = {};
+
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i].toLowerCase();
+    if(/[a-z0-9]/.test(char)) {
+      if(obj[char] > 0) {
+        obj[char]++;
+      } else {
+        obj[char] = 1;
+      };
+    }
+  }
+  return obj;
+}
+```
+
+Começamos mudando o "for" para "for of", mais por estética. Assim, eliminamos a necessidade de fazer "str[i]", por só estarmos trabalhando com "char".
+
+```js
+function charCount(str) {
+  var obj = {};
+
+  for (var char of str) {
+    char = char.toLowerCase();
+    if(/[a-z0-9]/.test(char)) {
+      if(obj[char] > 0) {
+        obj[char]++;
+      } else {
+        obj[char] = 1;
+      };
+    }
+  }
+  return obj;
+}
+```
+
+Nos "ifs", estamos adicionando um caractere a um valor se ele já existir ou inicializando com um valor 1 se não existir. Como é simples, podemos combinar, se possível, em uma única linha:
+
+```js
+function charCount(str) {
+  var obj = {};
+
+  for (var char of str) {
+    char = char.toLowerCase();
+    if(/[a-z0-9]/.test(char)) {
+        obj[char] = ++obj[char] || 1;
+      } 
+    }
+  return obj;
+}
+```
+
+Por último, podemos checar se usar uma expressão regular é a forma mais eficiente de fazer a checagem dos alfanuméricos. Existe algo melhor para checar se algo é uma letra ou um número?
+
+[Após pesquisas, verifcamos que sim, ao utilizar "charCodeAt()"](https://stackoverflow.com/questions/4434076/best-way-to-alphanumeric-check-in-javascript) e comparações booleanas:
+
+```js
+function isAlphaNumeric(str) {
+  var code, i, len;
+
+  for (i = 0, len = str.length; i < len; i++) {
+    code = str.charCodeAt(i);
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+        !(code > 64 && code < 91) && // upper alpha (A-Z)
+        !(code > 96 && code < 123)) { // lower alpha (a-z)
+      return false;
+    }
+  }
+  return true;
+};
+```
+
+Retornando ao nosso código para essa modificação, criamos a função que faz essa checagem e substituimos (deixando ela separada, fica mais legível) a linha que antes era com expressão regular por "isAlphaNumeric(char)":
+
+```js
+function charCount(str) {
+  var obj = {};
+
+  for (var char of str) {
+    char = char.toLowerCase();
+    if(isAlphaNumeric(char)) {
+        obj[char] = ++obj[char] || 1;
+      } 
+    }
+  return obj;
+}
+
+
+function isAlphaNumeric(char) {
+   var  code = char.charCodeAt(0);
+
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+        !(code > 64 && code < 91) && // upper alpha (A-Z)
+        !(code > 96 && code < 123)) { // lower alpha (a-z)
+      return false;
+    }
+  return true;
+};
+
+charCodeAt(0);
+```
+
+Podemos também mudar a passagem das letras para minúsculas para ocorrer depois de checar se um caractere é alfanumérico:
+
+```js
+function charCount(str) {
+  var obj = {};
+
+  for (var char of str) {
+    if(isAlphaNumeric(char)) {
+      char = char.toLowerCase();
+      obj[char] = ++obj[char] || 1;
+      } 
+    }
+  return obj;
+}
+
+
+function isAlphaNumeric(char) {
+   var  code = char.charCodeAt(0);
+
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+        !(code > 64 && code < 91) && // upper alpha (A-Z)
+        !(code > 96 && code < 123)) { // lower alpha (a-z)
+      return false;
+    }
+  return true;
+};
+
+charCodeAt(0);
+```
+
+
+
 
